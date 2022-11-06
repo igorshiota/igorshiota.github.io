@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Contact Me</title>
+  </head>
+  <body>
+    <header>
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+
+      <nav class="menu">
+        <div class="menu-branding"><div class="portrait"></div></div>
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link">Work</a>
+          </li>
+          <li class="nav-item current">
+            <a href="contact.html" class="nav-link">Get in Touch!</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="lg-heading">Contact <span class="text-secondary">Me</span></h1>
+      <div class="contact">
+        <div class="boxes">
+          <div>
+            <span class="text-secondary">Email:</span> igor.shiota@gmail.com
+          </div>
+          <div><span class="text-secondary">Phone:</span> 089 254 8241</div>
+          <div>
+            <span class="text-secondary">Social:</span>
+            <a href="#"><i class="fa fa-envelope fa-1.5x"></i></a>
+            <a href="#"><i class="fab fa-linkedin fa-1.5x"></i></a>
+            <a href="#"><i class="fab fa-github fa-1.5x"></i></a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="form">
+          <form id="contact" action="#" method="post">
+            <h3>
+              If you prefer, use the form below and I'll get back to you asap!
+            </h3>
+            <fieldset>
+              <input
+                placeholder="Your name"
+                type="text"
+                tabindex="1"
+                required
+                autofocus
+              />
+            </fieldset>
+            <fieldset>
+              <input
+                placeholder="Your Email Address"
+                type="email"
+                tabindex="2"
+                required
+              />
+            </fieldset>
+            <fieldset>
+              <input
+                placeholder="Your Phone Number (optional)"
+                type="tel"
+                tabindex="3"
+                required
+              />
+            </fieldset>
+            <fieldset>
+              <input
+                placeholder="Your Web Site (optional)"
+                type="url"
+                tabindex="4"
+                required
+              />
+            </fieldset>
+            <fieldset>
+              <textarea
+                placeholder="Type your message here"
+                tabindex="5"
+                required
+              ></textarea>
+            </fieldset>
+            <fieldset>
+              <button
+                name="submit"
+                type="submit"
+                id="contact-submit"
+                class="btn-light"
+                data-submit="...Sending"
+              >
+                Submit
+              </button>
+            </fieldset>
+          </form>
+        </div>
+        <!-- End Contact Form -->
+      </div>
+    </main>
+
+    <footer id="main-footer">Copyright &copy; 2019</footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

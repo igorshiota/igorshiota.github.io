@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap");
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 0.5s ease-out; }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #fff;
+    transition: all 0.5s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px); }
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden; }
+  .menu.show {
+    visibility: visible; }
+  .menu-branding, .menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden; }
+  .menu-nav {
+    margin: 0;
+    padding: 0;
+    background: #2b1e22;
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+    transition: all 0.5s ease-out; }
+    .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-branding {
+    background: #3a292e;
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.5s ease-out; }
+    .menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+    .menu-branding .portrait {
+      width: 250px;
+      height: 250px;
+      background: url("../img/igor.jpg");
+      border-radius: 50%;
+      border: solid 3px #db9a64; }
+  .menu .nav-item {
+    transform: translate3d(600px, 0, 0);
+    transition: all 0.5s ease-out; }
+    .menu .nav-item.show {
+      transform: translate3d(0, 0, 0); }
+    .menu .nav-item.current > a {
+      color: #db9a64; }
+  .menu .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.5s ease-out; }
+    .menu .nav-link:hover {
+      color: #db9a64; }
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */ }
+
+/* Modal Content */
+.modal-content {
+  background-color: #3a292e;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  color: #f2f2f2; }
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold; }
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #3a292e;
+  color: #fff;
+  height: 100%;
+  margin: 0;
+  font-family: 'Bebas Neue', cursive;
+  line-height: 1.5; }
+  body#bg-img {
+    background: url(../img/home-bg.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bg-img:after {
+      content: "";
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(58, 41, 46, 0.9); }
+  body p {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.6px; }
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.3rem; }
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 3.5rem; }
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
+    padding: 0.2rem;
+    background: rgba(64, 45, 51, 0.5); }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%; }
+
+.text-secondary {
+  color: #db9a64;
+  letter-spacing: 0.1rem; }
+
+main {
+  align-items: center;
+  text-align: center;
+  padding: 4rem;
+  min-height: calc(100vh - 60px); }
+  main .icons {
+    margin-top: 1rem; }
+    main .icons a {
+      padding: 0.4rem; }
+      main .icons a:hover {
+        color: #db9a64;
+        transition: all 0.5s ease-out; }
+  main#home {
+    overflow: hidden; }
+    main#home h1 {
+      margin-top: 0vh; }
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr); }
+  .about-info .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: #db9a64 2px solid; }
+  .about-info .bio {
+    grid-area: bio;
+    font-size: 1.2rem; }
+  .about-info .job-1 {
+    grid-area: job1; }
+  .about-info .job-2 {
+    grid-area: job2; }
+  .about-info .job-3 {
+    grid-area: job3; }
+  .about-info .job {
+    background: #49343a;
+    padding: 0.5rem;
+    border-bottom: #db9a64 5px solid; }
+
+.projects, .projects-modal-mobile {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  grid-gap: 0.7rem;
+  margin-top: 2rem; }
+  .projects img, .projects-modal-mobile img {
+    width: 100%;
+    border: 3px #fff solid; }
+    .projects img:hover, .projects-modal-mobile img:hover {
+      opacity: 0.5;
+      border-color: #db9a64;
+      transition: all 0.5s ease-out; }
+  .projects figure, .projects-modal-mobile figure {
+    margin: 1em; }
+  .projects figcaption, .projects-modal-mobile figcaption {
+    text-align: center; }
+
+.projects-modal {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  grid-gap: 0.7rem;
+  margin-top: 2rem; }
+  .projects-modal img {
+    width: 100%;
+    border: 3px #fff solid; }
+    .projects-modal img:hover {
+      opacity: 0.5;
+      border-color: #db9a64;
+      transition: all 0.5s ease-out; }
+  .projects-modal figure {
+    margin: 0em; }
+  .projects-modal figcaption {
+    text-align: center; }
+
+.projects-modal-mobile img {
+  border: none; }
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.boxes {
+  margin-top: 1rem; }
+  .boxes div {
+    width: 18em;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 0.8rem 1.5rem;
+      background: #db9a64;
+      color: #3a292e; }
+      .boxes div:hover span {
+        color: #3a292e; }
+      .boxes div:hover i {
+        color: #3a292e; }
+
+.form {
+  width: 40%;
+  font-size: 1.5rem;
+  border: 3px #fff solid;
+  padding: 1.5rem 2.5rem;
+  margin-left: 3em; }
+  .form ::placeholder {
+    font-family: "Segoe UI";
+    font-weight: 600; }
+  .form fieldset {
+    border: none; }
+  .form input {
+    width: 100%;
+    padding: .5rem;
+    height: 3em; }
+  .form textarea {
+    width: 100%;
+    padding: .5rem;
+    height: 10em; }
+  .form button {
+    width: 100%;
+    font-weight: 600; }
+  .form h4 {
+    letter-spacing: 0.1rem; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #db9a64;
+    color: set-text-color #db9a64; }
+
+.btn-dark {
+  background: black;
+  color: #fff;
+  letter-spacing: .1rem; }
+
+.btn-light {
+  background: #bea4ab;
+  color: #111;
+  letter-spacing: .1rem; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #1c1416;
+  color: #fff;
+  height: 60px; }
+
+@media screen and (min-width: 1171px) {
+  .main-info p {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0.7em 0; }
+  .projects, .projects-modal-mobile {
+    grid-template-columns: repeat(4, 1fr); }
+  .projects-modal {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects, .projects-modal-mobile {
+    grid-template-columns: repeat(4, 1fr); }
+  .projects-modal {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (max-width: 768px) {
+  main .lg-heading {
+    line-height: 1;
+    margin-bottom: 1rem; }
+  .about-info {
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 5vh; }
+  .projects {
+    grid-template-columns: 1fr; }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .boxes div {
+    width: 100%;
+    font-size: 1.5rem; }
+  .form {
+    width: 100%;
+    font-size: 1.5rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin: 0; }
+    .form ::placeholder {
+      font-family: "Segoe UI";
+      font-weight: 600; }
+    .form fieldset {
+      border: none;
+      margin: 0;
+      padding: 0.5rem; } }
