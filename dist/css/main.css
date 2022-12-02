@@ -362,8 +362,10 @@ main {
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 5vh; }
-  .projects {
-    grid-template-columns: 1fr; }
+  .projects, .projects-modal-mobile {
+    display: block; }
+  .projects-modal {
+    display: block; }
   .contact {
     display: flex;
     flex-direction: column;

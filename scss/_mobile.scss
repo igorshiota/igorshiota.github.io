@@ -59,8 +59,12 @@
     margin-top: 5vh;
   }
 
-  .projects {
-    grid-template-columns: 1fr;
+  .projects, .projects-modal-mobile {
+    display: block;
+  }
+
+  .projects-modal {
+    display: block;
   }
 
   .contact {

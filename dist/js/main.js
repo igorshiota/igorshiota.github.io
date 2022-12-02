@@ -48,5 +48,14 @@ window.onclick = function(event) {
     }
 };
 
+//Close modal by pressing esc key
+
+$(document).keydown(function(event) { 
+    if (event.keyCode == 27) { 
+      $('.modal').hide();
+      
+    }
+  });
+
 
   
