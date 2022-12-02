@@ -1,0 +1,26 @@
+- About Me
+
+I have been working and developing for about 5 years now. My professional focus is mainly on Web Design, Web Development, App Development, but I also enjoy experimenting in all the different areas that interest me, such as Game Development, IoT (Internet of Things), AI and so on. I guess I'm just a tech enthusiast :) I also have experience with Digital Marketing, having worked with SEM (Search Engine Marketing) and SEO (Search Engine Optimization). All these practices come together in any of my projects.
+You can check my Github for more technical information on my projects or if you prefer you can contact me directly - I'm a quick replier ;)
+I really enjoy jumping into new projects and make the most and best out of them, so if you would like to work together, give me a shout too!
+
+(toggle with the heading: Want more details?)
+
+As a developer, it doesn't matter if you would like to build a website, an app, or a web application from scratch, if you would like me to have a look and help your existing project, or even which programming languages you use. As I mentioned, I really enjoy diving into new projects and challenges and we can definitely have a chat on how we can help each other and add more value to your business. Count me in!
+
+(contact button)
+
+- Portfolio
+
+-- 3 DSG websites (decide which ones and improve them 1 - Salon Owner, Bankz, Bozena)
+-- Game On Mobile App
+-- Cucurutcho Shop App
+-- 3 Other nice templates (Digy Savvys, Photographer, Restaurant)
+-- Game Screenshots
+
+Add modals for project links
+
+- Contact
+
+-- Add a contact form and links to social media
+
