@@ -187,6 +187,25 @@ main {
   }
 }
 
+// Tech Stack list
+
+.tech-stack {
+  display: flex;
+  justify-content: center;
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    font-size: 1.5rem;
+  }
+  
+  .tech-stack-title {
+    font-size: 2rem;
+  }
+}
+
 // Contact Page
 
 .contact {

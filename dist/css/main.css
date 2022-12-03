@@ -258,6 +258,16 @@ main {
 .projects-modal-mobile img {
   border: none; }
 
+.tech-stack {
+  display: flex;
+  justify-content: center; }
+  .tech-stack ul {
+    list-style-type: none; }
+  .tech-stack li {
+    font-size: 1.5rem; }
+  .tech-stack .tech-stack-title {
+    font-size: 2rem; }
+
 .contact {
   display: flex;
   flex-direction: row;
