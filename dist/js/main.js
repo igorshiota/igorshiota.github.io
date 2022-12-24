@@ -24,11 +24,11 @@ function setDataIndex() {
 }
 
 for (i = 0; i < modal_btn_multi.length; i++) {
-    modal_btn_multi[i].onclick = function() {
+        modal_btn_multi[i].onclick = function() {
         var ElementIndex = this.getAttribute('data-index');
         modalparent[ElementIndex].style.display = "block";
     };
-
+  
     // When the user clicks on <span> (x), close the modal
     span_close_multi[i].onclick = function() {
         var ElementIndex = this.getAttribute('data-index');
