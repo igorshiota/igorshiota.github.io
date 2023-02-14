@@ -264,7 +264,7 @@ main {
   .tech-stack ul {
     list-style-type: none; }
   .tech-stack li {
-    font-size: 1.5rem; }
+    font-size: 1.2rem; }
   .tech-stack .tech-stack-title {
     font-size: 2rem; }
 
@@ -395,4 +395,6 @@ main {
     .form fieldset {
       border: none;
       margin: 0;
-      padding: 0.5rem; } }
+      padding: 0.5rem; }
+  .tech-stack {
+    flex-direction: column; } }
